@@ -6,7 +6,7 @@ const app = express()
 const port = 3000
 const fs = require('fs'); //fs = filesystem.
 
-
+const wikiroot = 'https://en.wikipedia.org/wiki/';
 
 app.set("view engine", "ejs");
 app.set("port", process.env.PORT || 3000);
@@ -53,7 +53,7 @@ app.get('/flytest', (req,res) =>{
   for (let i=0; i<X; i++)
   {
       let R = Math.floor(Math.random()*L)
-      randomDogs += `${R}  ${dogData[R]}<br>`
+      randomDogs += `${R}  <a href="${wikiroot+dogData[R]}">${dogData[R]}</a><br>`
   }
   res.send(randomDogs);
 })
