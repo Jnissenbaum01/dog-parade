@@ -1,0 +1,982 @@
+{
+"parse":{
+"title":"List of dog breeds","pageid":8615,"links":[{
+"ns":0,"exists":"","*":"Affenpinscher"}
+,{
+"ns":0,"exists":"","*":"Afghan Hound"}
+,{
+"ns":0,"exists":"","*":"Aidi"}
+,{
+"ns":0,"exists":"","*":"Airedale Terrier"}
+,{
+"ns":0,"exists":"","*":"Akbash"}
+,{
+"ns":0,"exists":"","*":"Akita (dog)"}
+,{
+"ns":0,"exists":"","*":"Alano Espa\u00f1ol"}
+,{
+"ns":0,"exists":"","*":"Alapaha Blue Blood Bulldog"}
+,{
+"ns":0,"exists":"","*":"Alaskan Klee Kai"}
+,{
+"ns":0,"exists":"","*":"Alaskan Malamute"}
+,{
+"ns":0,"exists":"","*":"Alaskan husky"}
+,{
+"ns":0,"exists":"","*":"Alopekis"}
+,{
+"ns":0,"exists":"","*":"Alpine Dachsbracke"}
+,{
+"ns":0,"exists":"","*":"American Bulldog"}
+,{
+"ns":0,"exists":"","*":"American Bully"}
+,{
+"ns":0,"exists":"","*":"American Cocker Spaniel"}
+,{
+"ns":0,"exists":"","*":"American English Coonhound"}
+,{
+"ns":0,"exists":"","*":"American Eskimo Dog"}
+,{
+"ns":0,"exists":"","*":"American Foxhound"}
+,{
+"ns":0,"exists":"","*":"American Hairless Terrier"}
+,{
+"ns":0,"exists":"","*":"American Pit Bull Terrier"}
+,{
+"ns":0,"exists":"","*":"American Staffordshire Terrier"}
+,{
+"ns":0,"exists":"","*":"American Water Spaniel"}
+,{
+"ns":0,"exists":"","*":"Anatolian Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Andalusian Hound"}
+,{
+"ns":0,"exists":"","*":"Anglo-Fran\u00e7ais de Petite V\u00e9nerie"}
+,{
+"ns":0,"exists":"","*":"Appenzeller Sennenhund"}
+,{
+"ns":0,"exists":"","*":"Ariege Pointer"}
+,{
+"ns":0,"exists":"","*":"Ariegeois"}
+,{
+"ns":0,"exists":"","*":"Armant (dog)"}
+,{
+"ns":0,"exists":"","*":"Armenian Gampr dog"}
+,{
+"ns":0,"exists":"","*":"Artois Hound"}
+,{
+"ns":0,"exists":"","*":"Australian Cattle Dog"}
+,{
+"ns":0,"exists":"","*":"Australian Kelpie"}
+,{
+"ns":0,"exists":"","*":"Australian Shepherd"}
+,{
+"ns":0,"exists":"","*":"Australian Silky Terrier"}
+,{
+"ns":0,"exists":"","*":"Australian Stumpy Tail Cattle Dog"}
+,{
+"ns":0,"exists":"","*":"Australian Terrier"}
+,{
+"ns":0,"exists":"","*":"Austrian Black and Tan Hound"}
+,{
+"ns":0,"exists":"","*":"Austrian Pinscher"}
+,{
+"ns":0,"exists":"","*":"Azawakh"}
+,{
+"ns":0,"exists":"","*":"Bakharwal dog"}
+,{
+"ns":0,"exists":"","*":"Banjara Hound"}
+,{
+"ns":0,"exists":"","*":"Barak hound"}
+,{
+"ns":0,"exists":"","*":"Barbado da Terceira"}
+,{
+"ns":0,"exists":"","*":"Barbet (dog)"}
+,{
+"ns":0,"exists":"","*":"Basenji"}
+,{
+"ns":0,"exists":"","*":"Basque Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Basset Art\u00e9sien Normand"}
+,{
+"ns":0,"exists":"","*":"Basset Bleu de Gascogne"}
+,{
+"ns":0,"exists":"","*":"Basset Fauve de Bretagne"}
+,{
+"ns":0,"exists":"","*":"Basset Hound"}
+,{
+"ns":0,"exists":"","*":"Bavarian Mountain Hound"}
+,{
+"ns":0,"exists":"","*":"Beagle"}
+,{
+"ns":0,"exists":"","*":"Beagle-Harrier"}
+,{
+"ns":0,"exists":"","*":"Bearded Collie"}
+,{
+"ns":0,"exists":"","*":"Beauceron"}
+,{
+"ns":0,"exists":"","*":"Bedlington Terrier"}
+,{
+"ns":0,"exists":"","*":"Bergamasco Shepherd"}
+,{
+"ns":0,"exists":"","*":"Berger Picard"}
+,{
+"ns":0,"exists":"","*":"Bernese Mountain Dog"}
+,{
+"ns":0,"exists":"","*":"Bichon Fris\u00e9"}
+,{
+"ns":0,"exists":"","*":"Billy (dog)"}
+,{
+"ns":0,"exists":"","*":"Black Mouth Cur"}
+,{
+"ns":0,"exists":"","*":"Black Norwegian Elkhound"}
+,{
+"ns":0,"exists":"","*":"Black Russian Terrier"}
+,{
+"ns":0,"exists":"","*":"Black and Tan Coonhound"}
+,{
+"ns":0,"exists":"","*":"Bloodhound"}
+,{
+"ns":0,"exists":"","*":"Blue Lacy"}
+,{
+"ns":0,"exists":"","*":"Blue Picardy Spaniel"}
+,{
+"ns":0,"exists":"","*":"Bluetick Coonhound"}
+,{
+"ns":0,"exists":"","*":"Boerboel"}
+,{
+"ns":0,"exists":"","*":"Bohemian Shepherd"}
+,{
+"ns":0,"exists":"","*":"Bolognese (dog)"}
+,{
+"ns":0,"exists":"","*":"Border Collie"}
+,{
+"ns":0,"exists":"","*":"Border Terrier"}
+,{
+"ns":0,"exists":"","*":"Borzoi"}
+,{
+"ns":0,"exists":"","*":"Boston Terrier"}
+,{
+"ns":0,"exists":"","*":"Bouvier des Ardennes"}
+,{
+"ns":0,"exists":"","*":"Bouvier des Flandres"}
+,{
+"ns":0,"exists":"","*":"Boxer (dog)"}
+,{
+"ns":0,"exists":"","*":"Boykin Spaniel"}
+,{
+"ns":0,"exists":"","*":"Bracco Italiano"}
+,{
+"ns":0,"exists":"","*":"Braque Francais"}
+,{
+"ns":0,"exists":"","*":"Braque Saint-Germain"}
+,{
+"ns":0,"exists":"","*":"Braque d'Auvergne"}
+,{
+"ns":0,"exists":"","*":"Braque du Bourbonnais"}
+,{
+"ns":0,"exists":"","*":"Brazilian Dogo"}
+,{
+"ns":0,"exists":"","*":"Brazilian Terrier"}
+,{
+"ns":0,"exists":"","*":"Briard"}
+,{
+"ns":0,"exists":"","*":"Briquet Griffon Vend\u00e9en"}
+,{
+"ns":0,"exists":"","*":"Brittany dog"}
+,{
+"ns":0,"exists":"","*":"Broholmer"}
+,{
+"ns":0,"exists":"","*":"Bruno Jura Hound"}
+,{
+"ns":0,"exists":"","*":"Bucovina Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Bull Arab"}
+,{
+"ns":0,"exists":"","*":"Bull Terrier"}
+,{
+"ns":0,"exists":"","*":"Bulldog"}
+,{
+"ns":0,"exists":"","*":"Bullmastiff"}
+,{
+"ns":0,"exists":"","*":"Bully Kutta"}
+,{
+"ns":0,"exists":"","*":"Burgos Pointer"}
+,{
+"ns":0,"exists":"","*":"Ca de Bou"}
+,{
+"ns":0,"exists":"","*":"Cairn Terrier"}
+,{
+"ns":0,"exists":"","*":"Campeiro Bulldog"}
+,{
+"ns":0,"exists":"","*":"Can de Palleiro"}
+,{
+"ns":0,"exists":"","*":"Canaan Dog"}
+,{
+"ns":0,"exists":"","*":"Canadian Eskimo Dog"}
+,{
+"ns":0,"exists":"","*":"Cane Corso"}
+,{
+"ns":0,"exists":"","*":"Cantabrian Water Dog"}
+,{
+"ns":0,"exists":"","*":"Cardigan Welsh Corgi"}
+,{
+"ns":0,"exists":"","*":"Carolina Dog"}
+,{
+"ns":0,"exists":"","*":"Carpathian Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Catahoula Leopard Dog"}
+,{
+"ns":0,"exists":"","*":"Catalan Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Caucasian Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Cavalier King Charles Spaniel"}
+,{
+"ns":0,"exists":"","*":"Central Asian Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Cesky Fousek"}
+,{
+"ns":0,"exists":"","*":"Cesky Terrier"}
+,{
+"ns":0,"exists":"","*":"Chesapeake Bay Retriever"}
+,{
+"ns":0,"exists":"","*":"Chien Fran\u00e7ais Blanc et Noir"}
+,{
+"ns":0,"exists":"","*":"Chien Fran\u00e7ais Blanc et Orange"}
+,{
+"ns":0,"exists":"","*":"Chien Fran\u00e7ais Tricolore"}
+,{
+"ns":0,"exists":"","*":"Chihuahua (dog)"}
+,{
+"ns":0,"exists":"","*":"Chilean Terrier"}
+,{
+"ns":0,"exists":"","*":"Chinese Chongqing Dog"}
+,{
+"ns":0,"exists":"","*":"Chinese Crested Dog"}
+,{
+"ns":0,"exists":"","*":"Chinook (dog)"}
+,{
+"ns":0,"exists":"","*":"Chippiparai"}
+,{
+"ns":0,"exists":"","*":"Chow Chow"}
+,{
+"ns":0,"exists":"","*":"Cimarr\u00f3n Uruguayo"}
+,{
+"ns":0,"exists":"","*":"Cirneco dell'Etna"}
+,{
+"ns":0,"exists":"","*":"Clumber Spaniel"}
+,{
+"ns":0,"exists":"","*":"Colombian fino hound"}
+,{
+"ns":0,"exists":"","*":"Combai"}
+,{
+"ns":0,"exists":"","*":"Coton de Tulear"}
+,{
+"ns":0,"exists":"","*":"Cretan Hound"}
+,{
+"ns":0,"exists":"","*":"Croatian Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Curly Coated Retriever"}
+,{
+"ns":0,"exists":"","*":"Cursinu"}
+,{
+"ns":0,"exists":"","*":"Czechoslovakian Wolfdog"}
+,{
+"ns":0,"exists":"","*":"C\u00e3o Fila de S\u00e3o Miguel"}
+,{
+"ns":0,"exists":"","*":"C\u00e3o da Serra de Aires"}
+,{
+"ns":0,"exists":"","*":"C\u00e3o de Castro Laboreiro"}
+,{
+"ns":0,"exists":"","*":"C\u00e3o de Gado Transmontano"}
+,{
+"ns":0,"exists":"","*":"Dachshund"}
+,{
+"ns":0,"exists":"","*":"Dalmatian (dog)"}
+,{
+"ns":0,"exists":"","*":"Dandie Dinmont Terrier"}
+,{
+"ns":0,"exists":"","*":"Danish-Swedish Farmdog"}
+,{
+"ns":0,"exists":"","*":"Dingo"}
+,{
+"ns":0,"exists":"","*":"Dobermann"}
+,{
+"ns":0,"exists":"","*":"Dogo Argentino"}
+,{
+"ns":0,"exists":"","*":"Dogue de Bordeaux"}
+,{
+"ns":0,"exists":"","*":"Drentse Patrijshond"}
+,{
+"ns":0,"exists":"","*":"Drever"}
+,{
+"ns":0,"exists":"","*":"Dunker"}
+,{
+"ns":0,"exists":"","*":"Dutch Shepherd"}
+,{
+"ns":0,"exists":"","*":"Dutch Smoushond"}
+,{
+"ns":0,"exists":"","*":"East-European Shepherd"}
+,{
+"ns":0,"exists":"","*":"East Siberian Laika"}
+,{
+"ns":0,"exists":"","*":"English Cocker Spaniel"}
+,{
+"ns":0,"exists":"","*":"English Foxhound"}
+,{
+"ns":0,"exists":"","*":"English Mastiff"}
+,{
+"ns":0,"exists":"","*":"English Setter"}
+,{
+"ns":0,"exists":"","*":"English Shepherd"}
+,{
+"ns":0,"exists":"","*":"English Springer Spaniel"}
+,{
+"ns":0,"exists":"","*":"English Toy Terrier (Black & Tan)"}
+,{
+"ns":0,"exists":"","*":"Entlebucher Mountain Dog"}
+,{
+"ns":0,"exists":"","*":"Estonian Hound"}
+,{
+"ns":0,"exists":"","*":"Estrela Mountain Dog"}
+,{
+"ns":0,"exists":"","*":"Eurasier"}
+,{
+"ns":0,"exists":"","*":"Field Spaniel"}
+,{
+"ns":0,"exists":"","*":"Fila Brasileiro"}
+,{
+"ns":0,"exists":"","*":"Finnish Hound"}
+,{
+"ns":0,"exists":"","*":"Finnish Lapphund"}
+,{
+"ns":0,"exists":"","*":"Finnish Spitz"}
+,{
+"ns":0,"exists":"","*":"Flat-coated Retriever"}
+,{
+"ns":0,"exists":"","*":"French Bulldog"}
+,{
+"ns":0,"exists":"","*":"French Spaniel"}
+,{
+"ns":0,"exists":"","*":"Galgo Espa\u00f1ol"}
+,{
+"ns":0,"exists":"","*":"Garafian Shepherd"}
+,{
+"ns":0,"exists":"","*":"Gascon Saintongeois"}
+,{
+"ns":0,"exists":"","*":"Georgian Shepherd"}
+,{
+"ns":0,"exists":"","*":"German Hound"}
+,{
+"ns":0,"exists":"","*":"German Longhaired Pointer"}
+,{
+"ns":0,"exists":"","*":"German Pinscher"}
+,{
+"ns":0,"exists":"","*":"German Shepherd"}
+,{
+"ns":0,"exists":"","*":"German Shorthaired Pointer"}
+,{
+"ns":0,"exists":"","*":"German Spaniel"}
+,{
+"ns":0,"exists":"","*":"German Spitz"}
+,{
+"ns":0,"exists":"","*":"German Wirehaired Pointer"}
+,{
+"ns":0,"exists":"","*":"Giant Schnauzer"}
+,{
+"ns":0,"exists":"","*":"Glen of Imaal Terrier"}
+,{
+"ns":0,"exists":"","*":"Golden Retriever"}
+,{
+"ns":0,"exists":"","*":"Gordon Setter"}
+,{
+"ns":0,"exists":"","*":"Go\u0144czy Polski"}
+,{
+"ns":0,"exists":"","*":"Gran Mast\u00edn de Bor\u00ednquen"}
+,{
+"ns":0,"exists":"","*":"Grand Anglo-Fran\u00e7ais Blanc et Noir"}
+,{
+"ns":0,"exists":"","*":"Grand Anglo-Fran\u00e7ais Blanc et Orange"}
+,{
+"ns":0,"exists":"","*":"Grand Anglo-Fran\u00e7ais Tricolore"}
+,{
+"ns":0,"exists":"","*":"Grand Basset Griffon Vend\u00e9en"}
+,{
+"ns":0,"exists":"","*":"Grand Bleu de Gascogne"}
+,{
+"ns":0,"exists":"","*":"Grand Griffon Vend\u00e9en"}
+,{
+"ns":0,"exists":"","*":"Great Dane"}
+,{
+"ns":0,"exists":"","*":"Great Pyrenees"}
+,{
+"ns":0,"exists":"","*":"Greater Swiss Mountain Dog"}
+,{
+"ns":0,"exists":"","*":"Greek Harehound"}
+,{
+"ns":0,"exists":"","*":"Greek Shepherd"}
+,{
+"ns":0,"exists":"","*":"Greenland Dog"}
+,{
+"ns":0,"exists":"","*":"Greyhound"}
+,{
+"ns":0,"exists":"","*":"Griffon Bleu de Gascogne"}
+,{
+"ns":0,"exists":"","*":"Griffon Bruxellois"}
+,{
+"ns":0,"exists":"","*":"Griffon Fauve de Bretagne"}
+,{
+"ns":0,"exists":"","*":"Griffon Nivernais"}
+,{
+"ns":0,"exists":"","*":"Groenendael dog"}
+,{
+"ns":0,"exists":"","*":"Guatemalan Dogo"}
+,{
+"ns":0,"exists":"","*":"Gull Terrier"}
+,{
+"ns":0,"exists":"","*":"Hamiltonst\u00f6vare"}
+,{
+"ns":0,"exists":"","*":"Hanover Hound"}
+,{
+"ns":0,"exists":"","*":"Harrier (dog)"}
+,{
+"ns":0,"exists":"","*":"Havanese dog"}
+,{
+"ns":0,"exists":"","*":"Himalayan Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Hokkaido (dog)"}
+,{
+"ns":0,"exists":"","*":"Hortaya borzaya"}
+,{
+"ns":0,"exists":"","*":"Hovawart"}
+,{
+"ns":0,"exists":"","*":"Huntaway"}
+,{
+"ns":0,"exists":"","*":"Hygen Hound"}
+,{
+"ns":0,"exists":"","*":"Ibizan Hound"}
+,{
+"ns":0,"exists":"","*":"Icelandic Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Indian Spitz"}
+,{
+"ns":0,"exists":"","*":"Indian pariah dog"}
+,{
+"ns":0,"exists":"","*":"Irish Red and White Setter"}
+,{
+"ns":0,"exists":"","*":"Irish Setter"}
+,{
+"ns":0,"exists":"","*":"Irish Terrier"}
+,{
+"ns":0,"exists":"","*":"Irish Water Spaniel"}
+,{
+"ns":0,"exists":"","*":"Irish Wolfhound"}
+,{
+"ns":0,"exists":"","*":"Istrian Coarse-haired Hound"}
+,{
+"ns":0,"exists":"","*":"Istrian Shorthaired Hound"}
+,{
+"ns":0,"exists":"","*":"Italian Greyhound"}
+,{
+"ns":0,"exists":"","*":"Jack Russell Terrier"}
+,{
+"ns":0,"exists":"","*":"Jagdterrier"}
+,{
+"ns":0,"exists":"","*":"Japanese Chin"}
+,{
+"ns":0,"exists":"","*":"Japanese Spitz"}
+,{
+"ns":0,"exists":"","*":"Japanese Terrier"}
+,{
+"ns":0,"exists":"","*":"Jonangi"}
+,{
+"ns":0,"exists":"","*":"J\u00e4mthund"}
+,{
+"ns":0,"exists":"","*":"Kai Ken"}
+,{
+"ns":0,"exists":"","*":"Kangal Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Kanni"}
+,{
+"ns":0,"exists":"","*":"Karakachan dog"}
+,{
+"ns":0,"exists":"","*":"Karelian Bear Dog"}
+,{
+"ns":0,"exists":"","*":"Karst Shepherd"}
+,{
+"ns":0,"exists":"","*":"Keeshond"}
+,{
+"ns":0,"exists":"","*":"Kerry Beagle"}
+,{
+"ns":0,"exists":"","*":"Kerry Blue Terrier"}
+,{
+"ns":0,"exists":"","*":"King Charles Spaniel"}
+,{
+"ns":0,"exists":"","*":"King Shepherd"}
+,{
+"ns":0,"exists":"","*":"Kintamani (dog)"}
+,{
+"ns":0,"exists":"","*":"Kishu"}
+,{
+"ns":0,"exists":"","*":"Kokoni"}
+,{
+"ns":0,"exists":"","*":"Komondor"}
+,{
+"ns":0,"exists":"","*":"Kooikerhondje"}
+,{
+"ns":0,"exists":"","*":"Koolie"}
+,{
+"ns":0,"exists":"","*":"Korean Jindo"}
+,{
+"ns":0,"exists":"","*":"Koyun dog"}
+,{
+"ns":0,"exists":"","*":"Kromfohrl\u00e4nder"}
+,{
+"ns":0,"exists":"","*":"Kuchi dog"}
+,{
+"ns":0,"exists":"","*":"Kumaon Mastiff"}
+,{
+"ns":0,"exists":"","*":"Kunming wolfdog"}
+,{
+"ns":0,"exists":"","*":"Kuvasz"}
+,{
+"ns":0,"exists":"","*":"Labrador Retriever"}
+,{
+"ns":0,"exists":"","*":"Laekenois dog"}
+,{
+"ns":0,"exists":"","*":"Lagotto Romagnolo"}
+,{
+"ns":0,"exists":"","*":"Lakeland Terrier"}
+,{
+"ns":0,"exists":"","*":"Lancashire Heeler"}
+,{
+"ns":0,"exists":"","*":"Landseer (dog)"}
+,{
+"ns":0,"exists":"","*":"Lapponian Herder"}
+,{
+"ns":0,"exists":"","*":"Lapponian Shepherd"}
+,{
+"ns":0,"exists":"","*":"Large M\u00fcnsterl\u00e4nder"}
+,{
+"ns":0,"exists":"","*":"Leonberger"}
+,{
+"ns":0,"exists":"","*":"Lhasa Apso"}
+,{
+"ns":0,"exists":"","*":"Lithuanian Hound"}
+,{
+"ns":0,"exists":"","*":"Lupo Italiano"}
+,{
+"ns":0,"exists":"","*":"L\u00f6wchen"}
+,{
+"ns":0,"exists":"","*":"Mackenzie River husky"}
+,{
+"ns":0,"exists":"","*":"Magyar ag\u00e1r"}
+,{
+"ns":0,"exists":"","*":"Mahratta Greyhound"}
+,{
+"ns":0,"exists":"","*":"Majorca Ratter"}
+,{
+"ns":0,"exists":"","*":"Majorca Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Malinois dog"}
+,{
+"ns":0,"exists":"","*":"Maltese (dog)"}
+,{
+"ns":0,"exists":"","*":"Manchester Terrier"}
+,{
+"ns":0,"exists":"","*":"Maremma Sheepdog"}
+,{
+"ns":0,"exists":"","*":"McNab dog"}
+,{
+"ns":0,"exists":"","*":"Mexican Hairless Dog"}
+,{
+"ns":0,"exists":"","*":"Miniature American Shepherd"}
+,{
+"ns":0,"exists":"","*":"Miniature Bull Terrier"}
+,{
+"ns":0,"exists":"","*":"Miniature Fox Terrier"}
+,{
+"ns":0,"exists":"","*":"Miniature Pinscher"}
+,{
+"ns":0,"exists":"","*":"Miniature Schnauzer"}
+,{
+"ns":0,"exists":"","*":"Miniature Shar Pei"}
+,{
+"ns":0,"exists":"","*":"Molossus of Epirus"}
+,{
+"ns":0,"exists":"","*":"Montenegrin Mountain Hound"}
+,{
+"ns":0,"exists":"","*":"Mountain Cur"}
+,{
+"ns":0,"exists":"","*":"Mucuchies"}
+,{
+"ns":0,"exists":"","*":"Mudhol Hound"}
+,{
+"ns":0,"exists":"","*":"Mudi"}
+,{
+"ns":0,"exists":"","*":"Neapolitan Mastiff"}
+,{
+"ns":0,"exists":"","*":"New Guinea singing dog"}
+,{
+"ns":0,"exists":"","*":"New Zealand Heading Dog"}
+,{
+"ns":0,"exists":"","*":"Newfoundland (dog)"}
+,{
+"ns":0,"exists":"","*":"Norfolk Terrier"}
+,{
+"ns":0,"exists":"","*":"Norrbottenspets"}
+,{
+"ns":0,"exists":"","*":"Northern Inuit Dog"}
+,{
+"ns":0,"exists":"","*":"Norwegian Buhund"}
+,{
+"ns":0,"exists":"","*":"Norwegian Elkhound"}
+,{
+"ns":0,"exists":"","*":"Norwegian Lundehund"}
+,{
+"ns":0,"exists":"","*":"Norwich Terrier"}
+,{
+"ns":0,"exists":"","*":"Nova Scotia Duck Tolling Retriever"}
+,{
+"ns":0,"exists":"","*":"Old Croatian Sighthound"}
+,{
+"ns":0,"exists":"","*":"Old Danish Pointer"}
+,{
+"ns":0,"exists":"","*":"Old English Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Old English Terrier"}
+,{
+"ns":0,"exists":"","*":"Olde English Bulldogge"}
+,{
+"ns":0,"exists":"","*":"Original Fila Brasileiro"}
+,{
+"ns":0,"exists":"","*":"Otterhound"}
+,{
+"ns":0,"exists":"","*":"Pachon Navarro"}
+,{
+"ns":0,"exists":"","*":"Paisley Terrier"}
+,{
+"ns":0,"exists":"","*":"Papillon (dog)"}
+,{
+"ns":0,"exists":"","*":"Parson Russell Terrier"}
+,{
+"ns":0,"exists":"","*":"Pastore della Lessinia e del Lagorai"}
+,{
+"ns":0,"exists":"","*":"Patagonian Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Patterdale Terrier"}
+,{
+"ns":0,"exists":"","*":"Pekingese"}
+,{
+"ns":0,"exists":"","*":"Pembroke Welsh Corgi"}
+,{
+"ns":0,"exists":"","*":"Perro de Presa Canario"}
+,{
+"ns":0,"exists":"","*":"Peruvian Hairless Dog"}
+,{
+"ns":0,"exists":"","*":"Petit Basset Griffon Vend\u00e9en"}
+,{
+"ns":0,"exists":"","*":"Petit Bleu de Gascogne"}
+,{
+"ns":0,"exists":"","*":"Phal\u00e8ne"}
+,{
+"ns":0,"exists":"","*":"Pharaoh Hound"}
+,{
+"ns":0,"exists":"","*":"Phu Quoc Ridgeback"}
+,{
+"ns":0,"exists":"","*":"Picardy Spaniel"}
+,{
+"ns":0,"exists":"","*":"Plott Hound"}
+,{
+"ns":0,"exists":"","*":"Plummer Terrier"}
+,{
+"ns":0,"exists":"","*":"Podenco Canario"}
+,{
+"ns":0,"exists":"","*":"Pointer (dog breed)"}
+,{
+"ns":0,"exists":"","*":"Poitevin hound"}
+,{
+"ns":0,"exists":"","*":"Polish Greyhound"}
+,{
+"ns":0,"exists":"","*":"Polish Hound"}
+,{
+"ns":0,"exists":"","*":"Polish Lowland Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Polish Tatra Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Pomeranian (dog)"}
+,{
+"ns":0,"exists":"","*":"Pont-Audemer Spaniel"}
+,{
+"ns":0,"exists":"","*":"Poodle"}
+,{
+"ns":0,"exists":"","*":"Porcelaine"}
+,{
+"ns":0,"exists":"","*":"Portuguese Podengo"}
+,{
+"ns":0,"exists":"","*":"Portuguese Pointer"}
+,{
+"ns":0,"exists":"","*":"Portuguese Water Dog"}
+,{
+"ns":0,"exists":"","*":"Posavac Hound"}
+,{
+"ns":0,"exists":"","*":"Pra\u017esk\u00fd Krysa\u0159\u00edk"}
+,{
+"ns":0,"exists":"","*":"Pudelpointer"}
+,{
+"ns":0,"exists":"","*":"Pug"}
+,{
+"ns":0,"exists":"","*":"Puli dog"}
+,{
+"ns":0,"exists":"","*":"Pumi (dog)"}
+,{
+"ns":0,"exists":"","*":"Pungsan dog"}
+,{
+"ns":0,"exists":"","*":"Pyrenean Mastiff"}
+,{
+"ns":0,"exists":"","*":"Pyrenean Shepherd"}
+,{
+"ns":0,"exists":"","*":"Rafeiro do Alentejo"}
+,{
+"ns":0,"exists":"","*":"Rajapalayam (dog)"}
+,{
+"ns":0,"exists":"","*":"Rampur Greyhound"}
+,{
+"ns":0,"exists":"","*":"Rastreador Brasileiro"}
+,{
+"ns":0,"exists":"","*":"Rat Terrier"}
+,{
+"ns":0,"exists":"","*":"Ratonero Bodeguero Andaluz"}
+,{
+"ns":0,"exists":"","*":"Ratonero Murciano de Huerta"}
+,{
+"ns":0,"exists":"","*":"Ratonero Valenciano"}
+,{
+"ns":0,"exists":"","*":"Redbone Coonhound"}
+,{
+"ns":0,"exists":"","*":"Rhodesian Ridgeback"}
+,{
+"ns":0,"exists":"","*":"Romanian Mioritic Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Romanian Raven Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Rottweiler"}
+,{
+"ns":0,"exists":"","*":"Rough Collie"}
+,{
+"ns":0,"exists":"","*":"Russell Terrier"}
+,{
+"ns":0,"exists":"","*":"Russian Spaniel"}
+,{
+"ns":0,"exists":"","*":"Russkiy Toy"}
+,{
+"ns":0,"exists":"","*":"Russo-European Laika"}
+,{
+"ns":0,"exists":"","*":"Saarloos wolfdog"}
+,{
+"ns":0,"exists":"","*":"Sabueso Espa\u00f1ol"}
+,{
+"ns":0,"exists":"","*":"Saint-Usuge Spaniel"}
+,{
+"ns":0,"exists":"","*":"Saluki"}
+,{
+"ns":0,"exists":"","*":"Samoyed (dog)"}
+,{
+"ns":0,"exists":"","*":"Sapsali"}
+,{
+"ns":0,"exists":"","*":"Sarabi dog"}
+,{
+"ns":0,"exists":"","*":"Schapendoes"}
+,{
+"ns":0,"exists":"","*":"Schillerst\u00f6vare"}
+,{
+"ns":0,"exists":"","*":"Schipperke"}
+,{
+"ns":0,"exists":"","*":"Schweizer Laufhund"}
+,{
+"ns":0,"exists":"","*":"Schweizerischer Niederlaufhund"}
+,{
+"ns":0,"exists":"","*":"Scotch Collie"}
+,{
+"ns":0,"exists":"","*":"Scottish Deerhound"}
+,{
+"ns":0,"exists":"","*":"Scottish Terrier"}
+,{
+"ns":0,"exists":"","*":"Sealyham Terrier"}
+,{
+"ns":0,"exists":"","*":"Segugio Italiano"}
+,{
+"ns":0,"exists":"","*":"Seppala Siberian Sleddog"}
+,{
+"ns":0,"exists":"","*":"Serbian Hound"}
+,{
+"ns":0,"exists":"","*":"Serbian Tricolour Hound"}
+,{
+"ns":0,"exists":"","*":"Serrano Bulldog"}
+,{
+"ns":0,"exists":"","*":"Shar Pei"}
+,{
+"ns":0,"exists":"","*":"Shetland Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Shiba Inu"}
+,{
+"ns":0,"exists":"","*":"Shih Tzu"}
+,{
+"ns":0,"exists":"","*":"Shikoku (dog)"}
+,{
+"ns":0,"exists":"","*":"Shiloh Shepherd dog"}
+,{
+"ns":0,"exists":"","*":"Siberian Husky"}
+,{
+"ns":0,"exists":"","*":"Silken Windhound"}
+,{
+"ns":0,"exists":"","*":"Sinhala Hound"}
+,{
+"ns":0,"exists":"","*":"Skye Terrier"}
+,{
+"ns":0,"exists":"","*":"Sloughi"}
+,{
+"ns":0,"exists":"","*":"Slovak Cuvac"}
+,{
+"ns":0,"exists":"","*":"Slovak Rough-haired Pointer"}
+,{
+"ns":0,"exists":"","*":"Slovensk\u00fd kopov"}
+,{
+"ns":0,"exists":"","*":"Smaland Hound"}
+,{
+"ns":0,"exists":"","*":"Small Greek domestic dog"}
+,{
+"ns":0,"exists":"","*":"Small M\u00fcnsterl\u00e4nder"}
+,{
+"ns":0,"exists":"","*":"Smooth Collie"}
+,{
+"ns":0,"exists":"","*":"Smooth Fox Terrier"}
+,{
+"ns":0,"exists":"","*":"Soft-Coated Wheaten Terrier"}
+,{
+"ns":0,"exists":"","*":"South Russian Ovcharka"}
+,{
+"ns":0,"exists":"","*":"Spanish Mastiff"}
+,{
+"ns":0,"exists":"","*":"Spanish Water Dog"}
+,{
+"ns":0,"exists":"","*":"Spinone Italiano"}
+,{
+"ns":0,"exists":"","*":"Sporting Lucas Terrier"}
+,{
+"ns":0,"exists":"","*":"St. Bernard (dog)"}
+,{
+"ns":0,"exists":"","*":"St. Hubert Jura Hound"}
+,{
+"ns":0,"exists":"","*":"Stabyhoun"}
+,{
+"ns":0,"exists":"","*":"Staffordshire Bull Terrier"}
+,{
+"ns":0,"exists":"","*":"Standard Schnauzer"}
+,{
+"ns":0,"exists":"","*":"Stephens Cur"}
+,{
+"ns":0,"exists":"","*":"Stichelhaar"}
+,{
+"ns":0,"exists":"","*":"Styrian Coarse-haired Hound"}
+,{
+"ns":0,"exists":"","*":"Sussex Spaniel"}
+,{
+"ns":0,"exists":"","*":"Swedish Lapphund"}
+,{
+"ns":0,"exists":"","*":"Swedish Vallhund"}
+,{
+"ns":0,"exists":"","*":"Tahltan Bear Dog"}
+,{
+"ns":0,"exists":"","*":"Taigan"}
+,{
+"ns":0,"exists":"","*":"Taiwan Dog"}
+,{
+"ns":0,"exists":"","*":"Tamaskan Dog"}
+,{
+"ns":0,"exists":"","*":"Teddy Roosevelt Terrier"}
+,{
+"ns":0,"exists":"","*":"Telomian"}
+,{
+"ns":0,"exists":"","*":"Tenterfield Terrier"}
+,{
+"ns":0,"exists":"","*":"Tervuren dog"}
+,{
+"ns":0,"exists":"","*":"Thai Bangkaew Dog"}
+,{
+"ns":0,"exists":"","*":"Thai Ridgeback"}
+,{
+"ns":0,"exists":"","*":"Tibetan Mastiff"}
+,{
+"ns":0,"exists":"","*":"Tibetan Spaniel"}
+,{
+"ns":0,"exists":"","*":"Tibetan Terrier"}
+,{
+"ns":0,"exists":"","*":"Tornjak"}
+,{
+"ns":0,"exists":"","*":"Tosa (dog)"}
+,{
+"ns":0,"exists":"","*":"Toy Fox Terrier"}
+,{
+"ns":0,"exists":"","*":"Toy Manchester Terrier"}
+,{
+"ns":0,"exists":"","*":"Transylvanian Hound"}
+,{
+"ns":0,"exists":"","*":"Treeing Cur"}
+,{
+"ns":0,"exists":"","*":"Treeing Tennessee Brindle"}
+,{
+"ns":0,"exists":"","*":"Treeing Walker Coonhound"}
+,{
+"ns":0,"exists":"","*":"Trigg Hound"}
+,{
+"ns":0,"exists":"","*":"Tyrolean Hound"}
+,{
+"ns":0,"exists":"","*":"Villano de las Encartaciones"}
+,{
+"ns":0,"exists":"","*":"Villanuco de Las Encartaciones"}
+,{
+"ns":0,"exists":"","*":"Vizsla"}
+,{
+"ns":0,"exists":"","*":"Volpino Italiano"}
+,{
+"ns":0,"exists":"","*":"Weimaraner"}
+,{
+"ns":0,"exists":"","*":"Welsh Sheepdog"}
+,{
+"ns":0,"exists":"","*":"Welsh Springer Spaniel"}
+,{
+"ns":0,"exists":"","*":"Welsh Terrier"}
+,{
+"ns":0,"exists":"","*":"West Highland White Terrier"}
+,{
+"ns":0,"exists":"","*":"West Siberian Laika"}
+,{
+"ns":0,"exists":"","*":"Westphalian Dachsbracke"}
+,{
+"ns":0,"exists":"","*":"Wetterhoun"}
+,{
+"ns":0,"exists":"","*":"Whippet"}
+,{
+"ns":0,"exists":"","*":"White Shepherd"}
+,{
+"ns":0,"exists":"","*":"White Swiss Shepherd Dog"}
+,{
+"ns":0,"exists":"","*":"Wire Fox Terrier"}
+,{
+"ns":0,"exists":"","*":"Wirehaired Pointing Griffon"}
+,{
+"ns":0,"exists":"","*":"Wirehaired Vizsla"}
+,{
+"ns":0,"exists":"","*":"Xiasi Dog"}
+,{
+"ns":0,"exists":"","*":"Yakutian Laika"}
+,{
+"ns":0,"exists":"","*":"Yorkshire Terrier"}
+,{
+"ns":0,"exists":"","*":"\u0160arplaninac"}
+,{
+"ns":14,"exists":"","*":"Category:Harv and Sfn template errors"}
+]}
+}

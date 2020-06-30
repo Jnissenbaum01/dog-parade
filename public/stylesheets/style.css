@@ -5,6 +5,12 @@ body {
   background-color: #edd59d;
 }
 
+img {
+  /* image-rendering: auto;
+  image-rendering: crisp-edges; */
+  image-rendering: pixelated;
+}
+
 a {
   color: black;
 }
