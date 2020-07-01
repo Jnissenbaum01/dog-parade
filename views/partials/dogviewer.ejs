@@ -3,6 +3,10 @@
     <h1> Dog Viewer </h1>
     <h5> Current Dog: <%= currentDog.name %> (<%=currentDog.index%>) </h5>
     <p><a href="<%=currentDog.url%>">[Wikipedia Article]</a></p>
-    <img src="images/dogicon.png" class="mr-3 w-50 " alt="...">
+    <% if (currentDogPhotoURL) { %>
+      <img src="<%=currentDogPhotoURL%>" class="mr-3 w-75 " alt="...">
+    <% } else { %>
+      <img src="images/dogicon.png" class="mr-3 w-50 " alt="...">
+    <% } %>
   </div>
 </div>

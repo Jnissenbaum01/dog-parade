@@ -23,3 +23,17 @@ sections:
 2 "D-K"
 3 "L-R"
 4 "S-Z"
+
+get images from a webpage:
+  https://en.wikipedia.org/w/api.php?action=parse&page=Pet_door&format=json&prop=images
+  |–>   https://en.wikipedia.org/w/api.php?action=parse&page=[page-name]&format=json&prop=images
+
+go to the image page from its wikipedia name:
+  https://commons.wikimedia.org/wiki/File:[Name of File]
+
+get article image:
+  https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=[NAME]
+
+
+TODO:
+// show "now image" if no image for dog (ex: "Combai", "Villanuco de Las Encartaciones")
