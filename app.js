@@ -37,12 +37,19 @@ function generate ()
 }
 
 //persistent variables:
-var _dogHistory = [];
-var _randomDogs = generate();
+var _dogHistory = []; //list of {index, name}
+var _randomDogs = generate(); //list of {index, name, url}
+var _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' }; //single object: {index, name, url}
+
+function setLocals(response){
+  response.wikiroot = wikiroot;
+  response.locals.randomDogs = _randomDogs;
+  response.locals.dogHistory = _dogHistory;
+  response.locals.currentDog = _currentDog;
+}
 
 app.get('/', (req, res) => {
-  res.locals.randomDogs = _randomDogs;
-  res.locals.dogHistory = _dogHistory;
+  setLocals(res);
   res.render('dogface')
 })
 
@@ -56,12 +63,11 @@ app.post('/', (req, res) =>{
   else if (req.body.postMsg == 'SEARCH_DOG')
   {
       _dogHistory.push({index:req.body.postArg, name:dogData[req.body.postArg]});
-      //console.log(_dogHistory);
+      _currentDog = {index:req.body.postArg, name:dogData[req.body.postArg], url:wikiroot+dogData[req.body.postArg]}
+      // console.log(_dogHistory);
   }
 
-  res.locals.randomDogs = _randomDogs;
-  res.locals.dogHistory = _dogHistory;
-
+  setLocals(res);
   res.render('dogface', {})
 })
 
@@ -80,6 +86,8 @@ app.get('/fly', (req,res) =>{
 
   res.send(nuevo)
 })
+
+
 
 app.get('/flytest', (req,res) =>{
   let L = dogData.length;

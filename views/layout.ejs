@@ -39,6 +39,8 @@
     <br>
 
     <div class="container-fluid">
+
+      <!-- column for dog-chooser and history -->
       <div class="row">
         <div class="col">
           <div class="col-sm bg-secondary">
@@ -50,8 +52,11 @@
             </div>
           </div>
         </div>
-        <div class="col-sm bg-primary"> dog </div>
-        <div class="col-sm bg-secondary"> dog </div>
+
+        <!-- column for dog-viewer -->
+        <div class="col-lg-8 bg-primary">
+          <%- include('partials/dogviewer') %>
+        </div>
       </div>
     </div>
 
