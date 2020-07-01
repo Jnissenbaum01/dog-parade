@@ -52,6 +52,7 @@ function setLocals(response){
   response.locals.currentDog = _currentDog;
   response.locals.currentDogPhotoURL = _currentDogPhotoURL;
   response.locals.extraImages = _extraImages;
+  response.locals.showExtraImages = _showExtraImages;
 }
 
 app.get('/', async (req, res) => {
@@ -65,6 +66,7 @@ app.get('/', async (req, res) => {
 /* POST messages through req.body.postMsg
 ** 1. REFRESH_DOG <- Refresh the list of random dogs
 ** 2. SEARCH_DOG <- Set the Main Dog to the selected dog index number in req.body.postArg
+** 3. TOGGLE_SHOW_EXTRA_IMAGES
 */
 app.post('/', async (req, res) =>{
   console.log("MSG: "+ req.body.postMsg)
@@ -77,6 +79,10 @@ app.post('/', async (req, res) =>{
       _dogHistory.push({index:req.body.postArg, name:dogData[req.body.postArg]});
       _currentDog = {index:req.body.postArg, name:dogData[req.body.postArg], url:wikiroot+dogData[req.body.postArg]}
       // console.log(_dogHistory);
+  }
+  else if (req.body.postMsg == 'TOGGLE_SHOW_EXTRA_IMAGES')
+  {
+    _showExtraImages = !_showExtraImages;
   }
 
   await swapDog();
@@ -99,31 +105,33 @@ app.post('/', async (req, res) =>{
 
         let result = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=${dogname}`);
         let mainImg = result.data.query.pages[`${pageid}`].original.source;
-
-        //console.log("result:"+ result.data.query.pages[`${pageid}`]);
-
         _currentDogPhotoURL = mainImg;
-        //console.log("inside again");
 
-        let extraImagesJSON = await axios.get(`https://en.wikipedia.org/w/api.php?action=parse&page=${dogname}&format=json&prop=images`);
-        _extraImages = []
-        let LEN = extraImagesJSON.data.parse.images.length;
-        for (let i=0; i<LEN; i++)
+        if (_showExtraImages)
         {
-          let image = extraImagesJSON.data.parse.images[i];
+          let extraImagesJSON = await axios.get(`https://en.wikipedia.org/w/api.php?action=parse&page=${dogname}&format=json&prop=images`);
+          _extraImages = []
+          let LEN = extraImagesJSON.data.parse.images.length;
+          for (let i=0; i<LEN; i++)
+          {
+            let image = extraImagesJSON.data.parse.images[i];
 
-          let ending = image.split('.').pop();
-          if (ending=='JPG' | ending=='jpg' | ending=='PNG' | ending=='png')
-          {
-            let again = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&titles=File:${image}&iiprop=url`)
-            let imgURL = again.data.query.pages['-1'].imageinfo['0'].url;
-            if (imgURL != _currentDogPhotoURL)
-              _extraImages.push(imgURL);
-            //console.log(again.data.query.pages['-1'].imageinfo['0'].url);
+            let ending = image.split('.').pop();
+            if (ending=='JPG' | ending=='jpg' | ending=='PNG' | ending=='png')
+            {
+              let again = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&titles=File:${image}&iiprop=url`)
+              let imgURL = again.data.query.pages['-1'].imageinfo['0'].url;
+              if (imgURL != _currentDogPhotoURL)
+                _extraImages.push(imgURL);
+              //console.log(again.data.query.pages['-1'].imageinfo['0'].url);
+            }
+            else
+            {
+            }
           }
-          else
-          {
-          }
+        }
+        else {
+          
         }
 
 
