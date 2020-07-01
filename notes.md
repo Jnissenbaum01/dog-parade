@@ -36,11 +36,13 @@ get article image:
 
 
 TODO:
-// show "now image" if no image for dog (ex: "Combai", "Villanuco de Las Encartaciones")
+// show "no image" if no image for dog (ex: "Combai", "Villanuco de Las Encartaciones")
 
-Fun names: "Grand Anglo-Français Tricolore" "Schweizerischer Niederlaufhund" "Small Münsterländer (423) "
+Fun names: "Grand Anglo-Français Tricolore" "Schweizerischer Niederlaufhund" "Small Münsterländer (423)" "Villano de las Encartaciones"
 
 PROBLEM: Image wasn't rendered for these dogs:
   "Český fousek"
   "Bichon Frisé (61)"
   "Cão Fila de São Miguel (141) "
+  "Pachón_navarro (???)"
+  "Cão da Serra de Aires (142)"

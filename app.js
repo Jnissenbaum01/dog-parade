@@ -42,6 +42,7 @@ var _dogHistory = []; //list of {index, name}
 var _randomDogs = generate(); //list of {index, name, url}
 var _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' }; //single object: {index, name, url}
 var _currentDogPhotoURL = null;
+var _extraImages = ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
 
 function setLocals(response){
   response.wikiroot = wikiroot;
@@ -49,11 +50,13 @@ function setLocals(response){
   response.locals.dogHistory = _dogHistory;
   response.locals.currentDog = _currentDog;
   response.locals.currentDogPhotoURL = _currentDogPhotoURL;
+  response.locals.extraImages = _extraImages;
 }
 
 app.get('/', async (req, res) => {
   await swapDog();
   setLocals(res);
+  // console.log("extra images"+ _extraImages);
   res.render('dogface')
 })
 
@@ -89,36 +92,46 @@ app.post('/', async (req, res) =>{
         let basicInfo = await axios.get(`https://en.wikipedia.org/w/api.php?action=parse&page=${dogname}&format=json&prop`)
         let pageid = basicInfo.data.parse.pageid;
 
-
-
         let result = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=${dogname}`);
         let mainImg = result.data.query.pages[`${pageid}`].original.source;
 
+        //console.log("result:"+ result.data.query.pages[`${pageid}`]);
+
         _currentDogPhotoURL = mainImg;
-        console.log("inside again");
+        //console.log("inside again");
+
+        let extraImagesJSON = await axios.get(`https://en.wikipedia.org/w/api.php?action=parse&page=${dogname}&format=json&prop=images`);
+        _extraImages = []
+        let LEN = extraImagesJSON.data.parse.images.length;
+        for (let i=0; i<LEN; i++)
+        {
+          let image = extraImagesJSON.data.parse.images[i];
+
+          let ending = image.split('.').pop();
+          if (ending=='JPG' | ending=='jpg' | ending=='PNG' | ending=='png')
+          {
+            let again = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&titles=File:${image}&iiprop=url`)
+            let imgURL = again.data.query.pages['-1'].imageinfo['0'].url;
+            if (imgURL != _currentDogPhotoURL)
+              _extraImages.push(imgURL);
+            //console.log(again.data.query.pages['-1'].imageinfo['0'].url);
+          }
+          else
+          {
+          }
+        }
+
+
+        // console.log(_extraImages);
+        //all images
         // console.log("new dog is"+ _currentDog.name);
-        console.log(basicInfo.data);
+        //console.log(basicInfo.data);
         // res.json(data)
       }
       catch(e){
         console.log("error in swapDog: "+ e)
       }
     }
-
-// async function swapDog()
-// {
-//   try
-//   {
-//     // let mainImageURL = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=Poodle`);
-//     let mainImageURL = await(`https://covidtracking.com/api/v1/states/ma/current.json`);
-//     console.log(mainImageURL);
-//   }
-//   catch (e)
-//   {
-//     console.log("error occurred when loading dog data from wikipedia");
-//   }
-//
-// }
 
 
 //helper function was used to parse the Wikipedia query
