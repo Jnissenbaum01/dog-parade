@@ -8,6 +8,8 @@ const fs = require('fs'); //fs = filesystem.
 
 const wikiroot = 'https://en.wikipedia.org/wiki/';
 
+const dogData = require('./public/JSON/alldogs.json')
+
 app.set("view engine", "ejs");
 app.set("port", process.env.PORT || 3000);
 app.use(
@@ -20,11 +22,47 @@ app.use(layouts);
 app.use(express.static("public"));
 // app.use(express.static("views"));
 
+function generate ()
+{
+  var randomDogs = [];
+
+  let L = dogData.length;
+  let X = 3+Math.floor(Math.random()*5)
+  for (let i=0; i<X; i++)
+  {
+      let R = Math.floor(Math.random()*L) //pick a random dog
+      randomDogs.push({index:R, name:dogData[R], url:wikiroot+dogData[R]})
+  }
+  return randomDogs;
+}
+
+//persistent variables:
+var _dogHistory = [];
+var _randomDogs = generate();
 
 app.get('/', (req, res) => {
-  //res.send('Hello World!')
-  //res.render('dogface',  {layout:false}) //render without layout
+  res.locals.randomDogs = _randomDogs;
+  res.locals.dogHistory = _dogHistory;
   res.render('dogface')
+})
+
+
+app.post('/', (req, res) =>{
+  console.log("MSG: "+ req.body.postMsg)
+
+  if (req.body.postMsg == 'REFRESH_DOG'){
+    _randomDogs = generate();
+  }
+  else if (req.body.postMsg == 'SEARCH_DOG')
+  {
+      _dogHistory.push({index:req.body.postArg, name:dogData[req.body.postArg]});
+      //console.log(_dogHistory);
+  }
+
+  res.locals.randomDogs = _randomDogs;
+  res.locals.dogHistory = _dogHistory;
+
+  res.render('dogface', {})
 })
 
 //helper function was used to parse the Wikipedia query
@@ -43,7 +81,6 @@ app.get('/fly', (req,res) =>{
   res.send(nuevo)
 })
 
-let dogData = require('./public/JSON/alldogs.json')
 app.get('/flytest', (req,res) =>{
   let L = dogData.length;
 

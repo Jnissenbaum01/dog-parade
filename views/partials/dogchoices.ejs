@@ -1,0 +1,28 @@
+<div class="card container-fluid" ">
+  <div class="card-body rounded-lg">
+    <!-- Generate the list of random dogs -->
+    <% if (randomDogs){ %>
+      <div>
+        <h5 class="card-title"><%= randomDogs.length%> Random Dogs</h5>
+        <ul>
+          <% randomDogs.forEach(dog =>{ %>
+            <!-- <li><%=dog.index%>  <a href="<%=dog.url%>"><%=dog.name%></a></li> -->
+            <li>
+              <form method="post" action="/">
+                  <input type="hidden" name="postMsg" value="SEARCH_DOG">
+                  <input type="hidden" name="postArg" value="<%=dog.index%>">
+                  <%=dog.index%>  <button type="submit" class="link"><%= dog.name%></button>
+                </form>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    <% } else { %>
+      <h5 class="card-title">Random Dogs</h5>
+    <% } %>
+    <form method="post" action="/">
+      <input type="hidden" name="postMsg" value="REFRESH_DOG">
+      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Refresh">
+    </form>
+  </div>
+</div>

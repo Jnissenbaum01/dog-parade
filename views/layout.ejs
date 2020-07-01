@@ -23,8 +23,35 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-4">
-          <img src="/images/dogicon.png" class="rounded mx-auto d-block" alt="" width=300 height=300>
+          <!-- <img src="/images/dogicon.png" class="rounded mx-auto d-block" alt="" width=300 height=300> -->
+
         </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm bg-secondary"></div>
+        <div class="col-sm bg-primary"> dog </div>
+        <div class="col-sm bg-secondary"> dog </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div class="col-sm bg-secondary">
+            <div>
+              <%- include('partials/dogchoices') %>
+            </div>
+            <div>
+              <%- include('partials/history') %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm bg-primary"> dog </div>
+        <div class="col-sm bg-secondary"> dog </div>
       </div>
     </div>
 
