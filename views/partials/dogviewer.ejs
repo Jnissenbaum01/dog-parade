@@ -1,7 +1,7 @@
 <div class="container-fluid bg-dark">
   <div class="text-center">
     <h1 class="text-primary"> Dog Viewer </h1>
-    <h5><span class="bg-info">Current Dog: <%= currentDog.name %> (<%=currentDog.index%>)</span></h5>
+    <h5><span class="bg-info">&nbsp Current Dog: <%= currentDog.name%> (<%=currentDog.index%>) &nbsp</span></h5>
     <p><span class="badge badge-secondary"><a href="<%=currentDog.url%>">[Wikipedia Article]</a></span></p>
 
     <!-- Main Dog Photo-->
@@ -47,11 +47,11 @@
         </div>
       </div>
     <% } else { %>
-      <div class="container w-75 h-25">>
+      <div class="container w-75 h-25">
         <% if (currentDogPhotoURL) { %>
           <img src="<%=currentDogPhotoURL%>" class="mw-100 mh-100" alt="...">
         <% } else { %>
-          
+
         <% } %>
       </div>
     <% } %>

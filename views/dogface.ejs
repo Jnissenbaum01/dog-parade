@@ -1,1 +1,67 @@
 <!DOCTYPE html>
+<html>
+<body>
+
+  <!-- heading bar -->
+  <div class="container-fluid">
+    <div class="row text-center">
+      <!-- Leftmost -->
+      <div class="col-sm bg-secondary">dog</div>
+
+      <!-- Center -->
+      <div class="col-md bg-primary">
+        <a href="/about" class="btn btn-dark">About</a>
+        <!-- <button type="button" class="btn btn-dark" href="/about">About</button> -->
+      </div>
+
+      <!-- Rightmost -->
+      <div class="col-sm bg-secondary">
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Options
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <form method="post" action="/">
+              <input type="hidden" name="postMsg" value="TOGGLE_SHOW_EXTRA_IMAGES">
+              <% if (showExtraImages){ %>
+                <button class="dropdown-item link btn-danger" type="submit"><span class="badge badge-danger">Disable</span> Extra Images (improves speed)</button>
+                <% }else{ %>
+                <button class="dropdown-item link btn-success" type="submit"><span class="badge badge-success">Enable</span> Extra Images (might slow down speed)</button>
+              <% } %>
+            </form>
+            <!-- <a class="dropdown-item" href="#">Another action</a> -->
+            <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container-fluid">
+    <!-- column for dog-chooser and history -->
+    <div class="row">
+      <div class="col">
+        <div class="col-sm bg-secondary">
+          <div>
+            <%- include('partials/dogchoices') %>
+          </div>
+          <div>
+            <%- include('partials/history') %>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <!-- column for dog-viewer -->
+      <div class="col-lg-8 bg-primary">
+        <%- include('partials/dogviewer') %>
+        <br>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html

@@ -131,7 +131,7 @@ app.post('/', async (req, res) =>{
           }
         }
         else {
-          
+
         }
 
 
@@ -177,6 +177,11 @@ app.get('/flytest', (req,res) =>{
       randomDogs += `${R}  <a href="${wikiroot+dogData[R]}">${dogData[R]}</a><br>`
   }
   res.send(randomDogs);
+})
+
+app.get('/about', (req, res) => {
+  setLocals(res);
+  res.render('about')
 })
 
 app.listen(port, () =>{
