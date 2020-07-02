@@ -48,3 +48,7 @@ PROBLEM: Image wasn't rendered for these dogs:
   "Cão da Serra de Aires (142)"
 
 heroku name: ⬢ boxing-donair-06727
+
+
+Pages with known redirects (and thus, will not render properly):
+  Old English Terrier –> Black and Tan Terrier
