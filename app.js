@@ -11,6 +11,12 @@ const wikiroot = 'https://en.wikipedia.org/wiki/';
 
 const dogData = require('./public/JSON/alldogs.json')
 
+const session = require('express-session');
+app.use(session({
+  secret: 'goats-is-my s e c r e t',
+}))
+
+
 app.set("view engine", "ejs");
 app.set("port", process.env.PORT || 3000);
 app.use(
@@ -38,15 +44,15 @@ function generate ()
 }
 
 //persistent variables:
-var _dogHistory = [{index:'77',name:'Boston Terrier'}]; //list of {index, name}
+const DEFAULT_dogHistory = [{index:'77',name:'Boston Terrier'}]; //list of {index, name}
 var _randomDogs = generate(); //list of {index, name, url}
 var _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' }; //single object: {index, name, url}
 var _currentDogPhotoURL = null;
 var _extraImages = ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
 var _showExtraImages = true;
 
-function _ResetHistory(){
-  var _dogHistory = [{index:'77',name:'Boston Terrier'}];
+function _ResetHistory(req){
+  req.session.dogHistory = [{index:'77',name:'Boston Terrier'}];
   _randomDogs = generate();
   _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' };
   _currentDogPhotoURL = null;
@@ -54,19 +60,27 @@ function _ResetHistory(){
   _showExtraImages = true;
 }
 
-function setLocals(response){
-  response.wikiroot = wikiroot;
-  response.locals.randomDogs = _randomDogs;
-  response.locals.dogHistory = _dogHistory;
-  response.locals.currentDog = _currentDog;
-  response.locals.currentDogPhotoURL = _currentDogPhotoURL;
-  response.locals.extraImages = _extraImages;
-  response.locals.showExtraImages = _showExtraImages;
+function setLocals(req, res){
+  var sess = req.session;
+  // sess.dogHistory = sess.dogHistory || [{index:'77',name:'Boston Terrier'}];
+
+  res.wikiroot = wikiroot;
+  res.locals.randomDogs = _randomDogs;
+  res.locals.currentDog = _currentDog;
+  res.locals.currentDogPhotoURL = _currentDogPhotoURL;
+  res.locals.extraImages = _extraImages;
+  res.locals.showExtraImages = _showExtraImages;
+
+  res.locals.dogHistory = sess.dogHistory ;
 }
 
 app.get('/', async (req, res) => {
+  var sess = req.session;
+  sess.dogHistory = sess.dogHistory || [{index:'77',name:'Boston Terrier'}];
+  console.log(sess.dogHistory);
+
   await swapDog();
-  setLocals(res);
+  setLocals(req, res);
   // console.log("extra images"+ _extraImages);
   res.render('dogface')
 })
@@ -79,6 +93,8 @@ app.get('/', async (req, res) => {
 ** 4. RESET
 */
 app.post('/', async (req, res) =>{
+  var sess = req.session;
+
   console.log("MSG: "+ req.body.postMsg)
 
   if (req.body.postMsg == 'REFRESH_DOG'){
@@ -86,9 +102,8 @@ app.post('/', async (req, res) =>{
   }
   else if (req.body.postMsg == 'SEARCH_DOG')
   {
-      _dogHistory.push({index:req.body.postArg, name:dogData[req.body.postArg]});
-      _currentDog = {index:req.body.postArg, name:dogData[req.body.postArg], url:wikiroot+dogData[req.body.postArg]}
-      // console.log(_dogHistory);
+    sess.dogHistory.push({index:req.body.postArg, name:dogData[req.body.postArg]})
+    _currentDog = {index:req.body.postArg, name:dogData[req.body.postArg], url:wikiroot+dogData[req.body.postArg]}
   }
   else if (req.body.postMsg == 'TOGGLE_SHOW_EXTRA_IMAGES')
   {
@@ -96,11 +111,11 @@ app.post('/', async (req, res) =>{
   }
   else if (req.body.postMsg == 'RESET')
   {
-    _ResetHistory()
+    _ResetHistory(req)
   }
 
   await swapDog();
-  setLocals(res);
+  setLocals(req, res);
   res.render('dogface', {})
 })
 
@@ -194,7 +209,7 @@ app.get('/flytest', (req,res) =>{
 })
 
 app.get('/about', (req, res) => {
-  setLocals(res);
+  setLocals(req, res);
   res.render('about')
 })
 
