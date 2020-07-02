@@ -38,12 +38,21 @@ function generate ()
 }
 
 //persistent variables:
-var _dogHistory = []; //list of {index, name}
+var _dogHistory = [{index:'77',name:'Boston Terrier'}]; //list of {index, name}
 var _randomDogs = generate(); //list of {index, name, url}
 var _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' }; //single object: {index, name, url}
 var _currentDogPhotoURL = null;
 var _extraImages = ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
 var _showExtraImages = true;
+
+function _ResetHistory(){
+  var _dogHistory = [{index:'77',name:'Boston Terrier'}];
+  _randomDogs = generate();
+  _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' };
+  _currentDogPhotoURL = null;
+  _extraImages = ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
+  _showExtraImages = true;
+}
 
 function setLocals(response){
   response.wikiroot = wikiroot;
@@ -67,6 +76,7 @@ app.get('/', async (req, res) => {
 ** 1. REFRESH_DOG <- Refresh the list of random dogs
 ** 2. SEARCH_DOG <- Set the Main Dog to the selected dog index number in req.body.postArg
 ** 3. TOGGLE_SHOW_EXTRA_IMAGES
+** 4. RESET
 */
 app.post('/', async (req, res) =>{
   console.log("MSG: "+ req.body.postMsg)
@@ -83,6 +93,10 @@ app.post('/', async (req, res) =>{
   else if (req.body.postMsg == 'TOGGLE_SHOW_EXTRA_IMAGES')
   {
     _showExtraImages = !_showExtraImages;
+  }
+  else if (req.body.postMsg == 'RESET')
+  {
+    _ResetHistory()
   }
 
   await swapDog();
