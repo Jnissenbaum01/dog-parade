@@ -65,9 +65,12 @@ function initSess(sess){
   sess.dogHistory = sess.dogHistory || [{index:'77',name:'Boston Terrier'}];
   sess.randomDogs = sess.randomDogs || generate();
   sess.currentDog = sess.currentDog || { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' };
-  sess.currentDogPhotoURL = sess.currentDogPhotoURL || null;
+  sess.currentDogPhotoURL = sess.currentDogPhotoURL || "https://upload.wikimedia.org/wikipedia/commons/d/d7/Boston-terrier-carlos-de.JPG";
   sess.extraImages = sess.extraImages || ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
   if (sess.showExtraImages == undefined){sess.showExtraImages = true}
+
+
+
   return sess;
 }
 
@@ -88,12 +91,10 @@ function setLocals(req, res){
 
 app.get('/', async (req, res) => {
   var sess = initSess(req.session);
-
-  console.log(">>"+ sess.currentDog + ".." + sess.currentDogPhotoURL);
-
-  sess = await swapDog();
+  // console.log(">>"+ sess.currentDog + ".." + sess.currentDogPhotoURL);
+  await swapDog(sess);
   setLocals(req, res);
-  // console.log("extra images"+ _extraImages);
+  console.log(">>"+ sess.currentDog + ".." + sess.currentDogPhotoURL);
   res.render('dogface')
 })
 
