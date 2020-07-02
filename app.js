@@ -53,33 +53,52 @@ var _showExtraImages = true;
 
 function _ResetHistory(req){
   req.session.dogHistory = [{index:'77',name:'Boston Terrier'}];
-  _randomDogs = generate();
-  _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' };
-  _currentDogPhotoURL = null;
+  req.session.randomDogs = generate();
+  // _randomDogs = generate();
+  req.session.currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' };
+  // _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' };
+  // _currentDogPhotoURL = null;
+  req.session.currentDogPhotoURL = null;
   _extraImages = ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
-  _showExtraImages = true;
+  // _showExtraImages = true;
+  req.session.showExtraImages = true;
+}
+
+//makes sure all values of session have been initialized
+function initSess(sess){
+  sess.dogHistory = sess.dogHistory || [{index:'77',name:'Boston Terrier'}];
+  sess.randomDogs = sess.randomDogs || generate();
+  sess.currentDog = sess.currentDog || { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' };
+  sess.currentDogPhotoURL = sess.currentDogPhotoURL || null;
+  sess.extraImages = sess.extraImages || ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
+  if (sess.showExtraImages == undefined){sess.showExtraImages = true}
+  return sess;
 }
 
 function setLocals(req, res){
   var sess = req.session;
-  // sess.dogHistory = sess.dogHistory || [{index:'77',name:'Boston Terrier'}];
+  var sess = initSess(req.session);
 
   res.wikiroot = wikiroot;
-  res.locals.randomDogs = _randomDogs;
-  res.locals.currentDog = _currentDog;
-  res.locals.currentDogPhotoURL = _currentDogPhotoURL;
+  // res.locals.randomDogs = _randomDogs;
+  // res.locals.currentDog = _currentDog;
+  // res.locals.currentDogPhotoURL = _currentDogPhotoURL;
   res.locals.extraImages = _extraImages;
-  res.locals.showExtraImages = _showExtraImages;
+  // res.locals.showExtraImages = _showExtraImages;
 
-  res.locals.dogHistory = sess.dogHistory ;
+  res.locals.dogHistory = sess.dogHistory;
+  res.locals.randomDogs = sess.randomDogs;
+  res.locals.currentDog = sess.currentDog;
+  res.locals.currentDogPhotoURL = sess.currentDogPhotoURL;
+
+  res.locals.showExtraImages = sess.showExtraImages;
 }
 
 app.get('/', async (req, res) => {
-  var sess = req.session;
-  sess.dogHistory = sess.dogHistory || [{index:'77',name:'Boston Terrier'}];
+  var sess = initSess(req.session);
   console.log(sess.dogHistory);
 
-  await swapDog();
+  sess = await swapDog();
   setLocals(req, res);
   // console.log("extra images"+ _extraImages);
   res.render('dogface')
@@ -93,50 +112,51 @@ app.get('/', async (req, res) => {
 ** 4. RESET
 */
 app.post('/', async (req, res) =>{
-  var sess = req.session;
+  var sess = initSess(req.session);
 
   console.log("MSG: "+ req.body.postMsg)
 
   if (req.body.postMsg == 'REFRESH_DOG'){
-    _randomDogs = generate();
+    //_randomDogs = generate();
+    sess.randomDogs = generate();
   }
   else if (req.body.postMsg == 'SEARCH_DOG')
   {
     sess.dogHistory.push({index:req.body.postArg, name:dogData[req.body.postArg]})
-    _currentDog = {index:req.body.postArg, name:dogData[req.body.postArg], url:wikiroot+dogData[req.body.postArg]}
+    sess.currentDog = {index:req.body.postArg, name:dogData[req.body.postArg], url:wikiroot+dogData[req.body.postArg]}
   }
   else if (req.body.postMsg == 'TOGGLE_SHOW_EXTRA_IMAGES')
   {
-    _showExtraImages = !_showExtraImages;
+    sess.showExtraImages = !sess.showExtraImages;
   }
   else if (req.body.postMsg == 'RESET')
   {
-    _ResetHistory(req)
+    req = _ResetHistory(req)
   }
 
-  await swapDog();
+  sess = await swapDog(sess);
   setLocals(req, res);
   res.render('dogface', {})
 })
 
   app.get('/swapdog', async (req,res,next)=>{
-    await swapDog();
-    res.send(`<img src="${_currentDogPhotoURL}">`)
+    sess = await swapDog(sess);
+    res.send(`<img src="${sess.currentDogPhotoURL}">`)
   })
 
-  async function swapDog()
+  async function swapDog(sess)
   {
     console.log("swapdog");
       try {
-        let dogname = encodeURIComponent(_currentDog.name) //"Slovenský kopov"//"Í"//"Galgo_Español"//Piña//"Boston_Terrier"//"Poodle"//"Pug"//"Albert Einstein"
+        let dogname = encodeURIComponent(sess.currentDog.name) //"Slovenský kopov"//"Í"//"Galgo_Español"//Piña//"Boston_Terrier"//"Poodle"//"Pug"//"Albert Einstein"
         let basicInfo = await axios.get(`https://en.wikipedia.org/w/api.php?action=parse&page=${dogname}&format=json&prop`)
         let pageid = basicInfo.data.parse.pageid;
 
         let result = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=${dogname}`);
         let mainImg = result.data.query.pages[`${pageid}`].original.source;
-        _currentDogPhotoURL = mainImg;
+        sess.currentDogPhotoURL = mainImg;
 
-        if (_showExtraImages)
+        if (sess.showExtraImages)
         {
           let extraImagesJSON = await axios.get(`https://en.wikipedia.org/w/api.php?action=parse&page=${dogname}&format=json&prop=images`);
           _extraImages = []
@@ -150,7 +170,7 @@ app.post('/', async (req, res) =>{
             {
               let again = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&titles=File:${image}&iiprop=url`)
               let imgURL = again.data.query.pages['-1'].imageinfo['0'].url;
-              if (imgURL != _currentDogPhotoURL)
+              if (imgURL != sess.currentDogPhotoURL)
                 _extraImages.push(imgURL);
               //console.log(again.data.query.pages['-1'].imageinfo['0'].url);
             }
