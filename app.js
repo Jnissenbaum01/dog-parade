@@ -44,23 +44,19 @@ function generate ()
 }
 
 //persistent variables:
-const DEFAULT_dogHistory = [{index:'77',name:'Boston Terrier'}]; //list of {index, name}
-var _randomDogs = generate(); //list of {index, name, url}
-var _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' }; //single object: {index, name, url}
-var _currentDogPhotoURL = null;
-var _extraImages = ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
-var _showExtraImages = true;
+// const DEFAULT_dogHistory = [{index:'77',name:'Boston Terrier'}]; //list of {index, name}
+// var _randomDogs = generate(); //list of {index, name, url}
+// var _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' }; //single object: {index, name, url}
+// var _currentDogPhotoURL = null;
+// var _extraImages = ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
+// var _showExtraImages = true;
 
 function _ResetHistory(req){
   req.session.dogHistory = [{index:'77',name:'Boston Terrier'}];
   req.session.randomDogs = generate();
-  // _randomDogs = generate();
   req.session.currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' };
-  // _currentDog = { index:'77', name:'Boston Terrier', url:wikiroot+'Boston Terrier' };
-  // _currentDogPhotoURL = null;
   req.session.currentDogPhotoURL = null;
-  _extraImages = ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
-  // _showExtraImages = true;
+  req.session.extraImages = ["https://upload.wikimedia.org/wikipedia/commons/f/f9/Female_6_month_old_boston_terrier.jpg"];
   req.session.showExtraImages = true;
 }
 
@@ -76,27 +72,24 @@ function initSess(sess){
 }
 
 function setLocals(req, res){
-  var sess = req.session;
   var sess = initSess(req.session);
 
   res.wikiroot = wikiroot;
-  // res.locals.randomDogs = _randomDogs;
-  // res.locals.currentDog = _currentDog;
-  // res.locals.currentDogPhotoURL = _currentDogPhotoURL;
-  res.locals.extraImages = _extraImages;
-  // res.locals.showExtraImages = _showExtraImages;
 
+  res.locals.extraImages = sess.extraImages;
   res.locals.dogHistory = sess.dogHistory;
   res.locals.randomDogs = sess.randomDogs;
   res.locals.currentDog = sess.currentDog;
   res.locals.currentDogPhotoURL = sess.currentDogPhotoURL;
-
   res.locals.showExtraImages = sess.showExtraImages;
+
+  return res;
 }
 
 app.get('/', async (req, res) => {
   var sess = initSess(req.session);
-  console.log(sess.dogHistory);
+
+  console.log(">>"+ sess.currentDog + ".." + sess.currentDogPhotoURL);
 
   sess = await swapDog();
   setLocals(req, res);
@@ -112,8 +105,7 @@ app.get('/', async (req, res) => {
 ** 4. RESET
 */
 app.post('/', async (req, res) =>{
-  var sess = initSess(req.session);
-
+  var sess = initSess(req.session)
   console.log("MSG: "+ req.body.postMsg)
 
   if (req.body.postMsg == 'REFRESH_DOG'){
@@ -159,7 +151,7 @@ app.post('/', async (req, res) =>{
         if (sess.showExtraImages)
         {
           let extraImagesJSON = await axios.get(`https://en.wikipedia.org/w/api.php?action=parse&page=${dogname}&format=json&prop=images`);
-          _extraImages = []
+          sess.extraImages = []
           let LEN = extraImagesJSON.data.parse.images.length;
           for (let i=0; i<LEN; i++)
           {
@@ -171,11 +163,12 @@ app.post('/', async (req, res) =>{
               let again = await axios.get(`https://en.wikipedia.org/w/api.php?action=query&format=json&prop=imageinfo&titles=File:${image}&iiprop=url`)
               let imgURL = again.data.query.pages['-1'].imageinfo['0'].url;
               if (imgURL != sess.currentDogPhotoURL)
-                _extraImages.push(imgURL);
+                sess.extraImages.push(imgURL);
               //console.log(again.data.query.pages['-1'].imageinfo['0'].url);
             }
             else
             {
+
             }
           }
         }
