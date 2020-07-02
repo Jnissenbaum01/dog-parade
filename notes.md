@@ -46,3 +46,5 @@ PROBLEM: Image wasn't rendered for these dogs:
   "Cão Fila de São Miguel (141) "
   "Pachón_navarro (???)"
   "Cão da Serra de Aires (142)"
+
+heroku name: ⬢ boxing-donair-06727

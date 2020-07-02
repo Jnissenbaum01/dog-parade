@@ -4,7 +4,7 @@ const express = require('express')
 const layouts = require('express-ejs-layouts')
 const axios = require('axios')
 const app = express()
-const port = 3000
+// const port = 3000
 const fs = require('fs'); //fs = filesystem.
 
 const wikiroot = 'https://en.wikipedia.org/wiki/';
@@ -184,6 +184,9 @@ app.get('/about', (req, res) => {
   res.render('about')
 })
 
-app.listen(port, () =>{
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+// app.listen(port, () =>{
+//   console.log(`Example app listening at http://localhost:${port}`)
+// })
+
+
+module.exports = app;
