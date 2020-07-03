@@ -3,8 +3,8 @@
     <!-- Generate the list of random dogs -->
     <% if (randomDogs){ %>
       <div>
-        <h5 class="card-title"><%= randomDogs.length%> Random Dogs</h5>
-        <ul>
+        <h5 class="card-title"><span id="dogListLength"><%=randomDogs.length%></span> Random Dogs</h5>
+        <ul id="dogList">
           <% randomDogs.forEach(dog =>{ %>
             <!-- <li><%=dog.index%>  <a href="<%=dog.url%>"><%=dog.name%></a></li> -->
             <li>
@@ -20,10 +20,44 @@
     <% } else { %>
       <h5 class="card-title">Random Dogs</h5>
     <% } %>
-    <!-- button -->
-    <form method="post" action="/">
+
+    <!-- old button (reloads ENTIRE PAGE) -->
+    <!-- <form method="post" action="/">
       <input type="hidden" name="postMsg" value="REFRESH_DOG">
       <input type="submit" class="btn btn-primary btn-lg btn-block" value="Refresh">
-    </form>
+    </form> -->
+
+    <!-- new button (no longer reloads entire page) -->
+    <button id="gogo" class="btn btn-primary btn-lg btn-block" onclick="refreshDogList()">Refresh</button>
   </div>
 </div>
+
+
+<script>
+
+  async function refreshDogList(){
+    try {
+      var newDogs = null;
+      await fetch('/newDogs', {method:'POST'})
+        .then(response => response.json())
+        .then(data => {newDogs= data} );
+      console.log(newDogs);
+      document.getElementById("dogListLength").innerHTML= newDogs.length
+      document.getElementById("dogList").innerHTML= ""
+      newDogs.forEach(dog => {
+        document.getElementById("dogList").innerHTML+=`
+          <li>
+            <form method="post" action="/">
+                <input type="hidden" name="postMsg" value="SEARCH_DOG">
+                <input type="hidden" name="postArg" value="${dog.index}">
+                ${dog.index}  <button type="submit" class="link">${dog.name}</button>
+              </form>
+          </li>
+        `
+      });
+    } catch (e) {
+      console.log("error" + e)
+    }
+  }
+
+</script>

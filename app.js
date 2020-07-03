@@ -227,6 +227,11 @@ app.get('/about', (req, res) => {
   res.render('about')
 })
 
+app.post('/newDogs', async (req, res) =>{
+  res.json(generate())
+})
+
+
 // app.listen(port, () =>{
 //   console.log(`Example app listening at http://localhost:${port}`)
 // })
