@@ -124,7 +124,7 @@ app.post('/', async (req, res) =>{
   }
   else if (req.body.postMsg == 'RESET')
   {
-    req = _ResetHistory(req)
+    sess.dogHistory = [{index:sess.currentDog.index, name:sess.currentDog.name}];//_ResetHistory(req)
   }
 
   sess = await swapDog(sess);
