@@ -223,12 +223,13 @@ app.get('/flytest', (req,res) =>{
 })
 
 app.get('/about', (req, res) => {
-  setLocals(req, res);
   res.render('about')
 })
 
 app.post('/newDogs', async (req, res) =>{
-  res.json(generate())
+  let newrandomDogs = generate();
+  req.session.randomDogs = newrandomDogs; //add new Random Dog list to session variables
+  res.json(newrandomDogs)                 //send new dog list to the app
 })
 
 
