@@ -14,6 +14,8 @@ const dogData = require('./public/JSON/alldogs.json')
 const session = require('express-session');
 app.use(session({
   secret: 'goats-is-my s e c r e t',
+  saveUninitialized: true,
+  resave: true
 }))
 
 
